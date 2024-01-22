@@ -697,8 +697,12 @@ button {
         margin-bottom: 8px;
 }
 
-.modal-checkbox{
+.modal-text{
         margin-bottom: 16px;
+}
+
+.modal-checkbox {
+        margin-bottom: 24px;
 }
 
 .modal-input {
@@ -782,12 +786,12 @@ button {
 }
 
 .label-span {
+        display: inline-flex;
         width: 16px;
         height: 16px;
         border: 1px solid #2E2F4266;
         border-radius: 2px;
         margin-right: 8px;
-        display: inline-flex;
         align-items: center;
         justify-content: center;
         fill: transparent;
