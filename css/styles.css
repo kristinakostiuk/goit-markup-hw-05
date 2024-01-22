@@ -303,7 +303,7 @@ button {
         border-radius: 0 0 4px 4px;
         border-radius: 0px 0px 4px 4px;
         background: var(--WHITE, #FFF);
-        transition-duration: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
         
 }
@@ -442,7 +442,6 @@ button {
 
 .portfolio-item:hover .text {
         transform: translateY(0%);
-       
 
 }
 
@@ -565,26 +564,29 @@ button {
 
 .footer-input {
         color: #FFF;
+        font-size: 12px;
+        line-height: 2.0;
+        letter-spacing: 0.04em;
         width: 264px;
         height: 40px;
         border-radius: 4px;
-        border: 1px solid #FFF;
+        border: 1px solid #ffffff;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         background-color: transparent;
         padding: 8px 16px;
 }
 
 .footer-input::placeholder {
-        color: #FFF;
-        font-size: 12px;
-        line-height: 2.0;
-        letter-spacing: 0.04em;
+        color: #FFFFFF;
 }
 
 .footer-subscribe-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
         color: #FFF;
-        font-family: inherit;
+        font-family: "Roboto", sans-serif;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.5;
@@ -593,7 +595,7 @@ button {
         border: 0;
         border-radius: 4px;
         box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.15);
-        width: 165px;
+        min-width: 165px;
         height: 40px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
@@ -601,6 +603,7 @@ button {
 
 .footer-icon {
         fill: #FFFFFF;
+        margin-left: 16px;
 }
 
 
@@ -610,11 +613,11 @@ button {
         position: fixed;
         top: 0;
         background-color: #2E2F4266;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .modal{
-        
         width: 408px;
         min-height: 584px;
         border-radius: 4px;
@@ -623,32 +626,47 @@ button {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 24px;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 72px 24px 24px 24px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close-btn {
+        background-color: #e7e9fc;
+        position: absolute;
+        padding: 0;
+        top: 24px;
+        right: 24px;
         margin-left: auto;
         margin-bottom: 24px;
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        border: 1px solid #E7E9FC;
+        border: 1px solid rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
-        background-color:#404BBF;
+        background-color: #404bbf;
+        border: none;
 }
 
+.modal-close-btn:focus {
+        background-color: #404bbf;
+        border: none;
+}
 .icon-back{
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-back:hover {
+        fill: #FFFFFF;
+}
+
+.icon-back:focus {
         fill: #FFFFFF;
 }
 
@@ -670,8 +688,13 @@ button {
 
 }
 
+
 .modal-filed{
         margin-bottom: 8px;
+}
+
+.modal-checkbox{
+        margin-bottom: 14px;
 }
 
 .modal-input {
@@ -682,7 +705,7 @@ button {
         background-color: transparent;
         outline: transparent;
         padding-left: 38px;
-        
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus{
@@ -698,8 +721,10 @@ button {
         font-family: Roboto;
         font-size: 12px;
         font-weight: 400;
-        line-height: 1.7;
+        line-height: 1.17;
         letter-spacing: 0.04em;
+        display: block;
+        margin-bottom: 4px;
 }
 
 .input-svg-container{
@@ -711,17 +736,23 @@ button {
         left: 16px;
         top: 50%;
         transform: translateY(-50%);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea{
         height: 120px;
         width: 360px;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
         border-radius: 4px;
         border: 1px solid #2E2F4266;
         padding: 8px 16px;
         background-color: transparent;
         outline: transparent;
         resize: none;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:focus{
@@ -731,14 +762,14 @@ button {
 .check-text {
         color:#8E8F99;
         font-size: 12px;
-        line-height: 1.7;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         display: flex;
         margin-bottom: 24px;
         cursor: pointer;
 }
 
-.check-text a {
+.label-link {
         color:#4D5AE5;
         font-size: 12px;
         line-height: 1.3;
@@ -746,7 +777,7 @@ button {
         text-decoration-line: underline;
 }
 
-.check-text span {
+.label-span {
         width: 16px;
         height: 16px;
         border: 1px solid #2E2F4266;
@@ -756,11 +787,14 @@ button {
         align-items: center;
         justify-content: center;
         fill: transparent;
+        display: inline-flex;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .check-text span {
         background-color: #404BBF;
-        fill: #FFFFFF;
+        fill: #F4F4FD;;
+        border: none;
 }
 
 .form-btn {
