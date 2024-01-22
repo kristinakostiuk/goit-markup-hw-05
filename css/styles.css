@@ -787,7 +787,7 @@ button {
         border: 1px solid #2E2F4266;
         border-radius: 2px;
         margin-right: 8px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         fill: transparent;
