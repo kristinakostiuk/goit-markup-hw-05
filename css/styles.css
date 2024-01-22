@@ -766,7 +766,6 @@ button {
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;
-        display: flex;
         margin-bottom: 24px;
         cursor: pointer;
 }
@@ -781,6 +780,8 @@ button {
 
 .label-span {
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 16px;
         height: 16px;
         border: 1px solid #2E2F4266;
