@@ -670,8 +670,12 @@ button {
         fill: #FFFFFF;
 }
 
-.icon-modal {
+.icon-modal:hover {
+        fill: #ffffff
+}
 
+.icon-modal:focus {
+        fill: #ffffff
 }
 
 .title-modal{
@@ -694,7 +698,7 @@ button {
 }
 
 .modal-checkbox{
-        margin-bottom: 14px;
+        margin-bottom: 16px;
 }
 
 .modal-input {
