@@ -733,6 +733,8 @@ button {
         position: relative;
 }
 
+.icon-back{}
+
 .icon-modal{
         position: absolute;
         left: 16px;
